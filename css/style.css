@@ -1,0 +1,258 @@
+:root {
+    --fuentePrincipal : 'Raleway', sans-serif;
+
+    /* color */
+    --colorTransparenteLight : rgba(0, 0, 0, 0.5);
+    --colorTransparenteBold : rgba(0, 0, 0, 0.8);
+    --blanco: #fff;
+    --negro: #000;
+
+    --colorDanger: #A64951;
+    --colorPrimary: #214037;
+    --colorSecondary: #77A699;
+    --colorlight: #E0F2CE;
+    --colorDark: #302c2d;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+}
+/* globales */
+.container {
+    max-width: 128rem;
+    width: 80%;
+    margin: 0 auto;
+}
+img {
+    width: 100%;
+    display: block;
+}
+.btn {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0 .1rem;
+    border-radius: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-dark {
+    color: var(--blanco);
+    background-color: var(--colorDark);
+}
+
+.btn-danger {
+    color: var(--blanco);
+    background-color: var(--colorDanger);
+}
+
+a {
+    text-decoration: none;
+}
+/* header */
+
+.bg-header {
+    height: 30rem;
+    background-image: url('../img/bg-header_2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-navbar {
+    background-color: var(--colorTransparenteLight);
+    padding: 2rem 0;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px) { 
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    } 
+}
+
+.navbar-brand {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    color: var(--blanco);
+    font-size: 3.2rem;
+    font-weight: 500;
+    margin-bottom: 3.2rem;
+}
+@media (min-width: 768px) { 
+    .navbar-brand {
+        flex-direction: row;
+        margin-bottom: 0;
+        column-gap: 1rem;
+    }
+}
+
+.navbar-brand-img {
+    width: 6rem;
+}
+
+@media (min-width: 768px) { 
+    .navbar-brand-img {
+        width: 7rem;
+    }
+}
+
+.navbar-nav {
+    background-color: var(--colorTransparenteBold);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+@media (min-width: 411px) {
+    .navbar-nav {
+        padding: 2rem;
+    }
+}
+
+.nav-link {
+    display: inline-block;
+    padding: .5rem;
+    color: var(--blanco);
+}
+.nav-link:hover {
+    background-color: var(--blanco);
+    color: var(--negro);
+    border-radius: 1rem;
+}
+/* main */
+.main {
+    margin-top: -3rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--blanco);
+}
+.main-title {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) { 
+    .tienda {
+        display: flex;
+        gap: 2rem;
+    }
+}
+/* Cards */
+.card {
+    background-color: var(--colorDanger);
+    color: var(-blanco);
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.card-body-title {
+    text-align: center;
+    font-size: 3rem;
+    margin: 1rem 0;
+    font-weight: 700;
+}
+
+.card-body-info {
+    font-weight: 200;
+}
+
+/* nosotros */
+
+.nosotros {
+   display: flex; 
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 2rem;
+   border-radius: 1rem;
+   overflow: hidden;
+   background-color: var(--colorDark);
+}
+
+.nosotros-col-img {
+    background-image: url('../img/nosotros.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 35rem;
+    width: 100%;
+    order: 2;
+}
+
+@media (min-width: 576px) { 
+    .nosotros-col-img {
+        height: 50rem;
+    }
+}
+
+.nosotros-col-text {
+    order: 1;
+}
+
+@media (min-width: 768px) { 
+    .nosotros {
+        flex-direction: row;
+    }
+    .nosotros-col-img { 
+        order: 1;
+        flex: 1 1 0;
+    }
+    .nosotros-col-text {
+        order: 2;
+        flex: 1 1 0;
+    }
+}
+.nosotros-info {
+    padding: 2rem;
+    text-align: center;
+    color: Var(--blanco);
+}
+
+.nosotros-info-title {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.nosotros-info-p {
+    font-weight: 200;
+}
+
+/* footer */
+.bg-footer {
+    background-color: var(--colorDark);
+    color: var(--blanco)
+}
+
+.bg-footer-p {
+    margin: 0;
+    padding: 2rem 0 ;
+    text-align: center;
+}
+
+.bg-footer-p__a {
+    color: var(--blanco);
+}
+.bg-footer-p__a:hover {
+    border-bottom: 1px solid var(--blanco);
+}
